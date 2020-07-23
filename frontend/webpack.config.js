@@ -9,19 +9,19 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contentBase: './public'
+        contentBase: './public',
     },
     resolve: {
-        extensions: ['','.js','.jsx',],
+        extensions: ['', '.js', '.jsx'],
         alias: {
-        modules: __dirname + '/node_modules'   
+            modules: __dirname + '/node_modules'
         }
     },
-    plugins: [
+    plugins: [ 
         new ExtractTextPlugin('app.css')
     ],
     module: {
-        loaders[{
+        loaders: [{
             test: /.js[x]?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
@@ -29,7 +29,7 @@ module.exports = {
                 presets: ['es2015', 'react'],
                 plugins: ['transform-object-rest-spread']
             }
-        },{
+        }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         }, {

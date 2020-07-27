@@ -1,7 +1,8 @@
 import {
     DESCRIPTION_CHANGED,
     TODO_SEARCHED,
-    TODO_ADDED
+    TODO_ADDED,
+    TODO_CLEAR
 } from '../objects/objects.constants';
 
 const initialState = {
@@ -13,9 +14,9 @@ export default (state = initialState, action) => {
 		case DESCRIPTION_CHANGED:
             return { ...state, description: action.payload };
         case TODO_SEARCHED:
-            return { ...state, list: action.payload.data };
-        case TODO_ADDED:
-            return { ...state, description: ''}
+            return { ...state, list: action.payload };
+        case TODO_CLEAR:
+        return { ...state, description: ''}
 		default:
 			return state;
 	}

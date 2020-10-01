@@ -5,12 +5,14 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { changeDescription, search, add, clear } from './todoActions';
 
+//Form Component for todoList
 class ToDoForm extends Component {
 	constructor(props) {
 		super(props);
 		this.keyHandler = this.keyHandler.bind(this);
 	}
-
+	
+	//component will mount will refresh the list
 	componentWillMount() {
 		this.props.search();
 	}

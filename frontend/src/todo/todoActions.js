@@ -30,6 +30,13 @@ export const markAsDone = (toDo) => {
 	};
 };
 
+
+export const markToWatchLater = (toDo) => {
+	return (dispatch) => {
+		axios.put(`${URL}/${toDo.isLater}`, { ...toDo, isLater: true }).then((resp) => dispatch(search()));
+	};
+};
+
 export const markAsPending = (toDo) => {
 	return (dispatch) => {
 		axios.put(`${URL}/${toDo._id}`, { ...toDo, done: false }).then((resp) => dispatch(search()));

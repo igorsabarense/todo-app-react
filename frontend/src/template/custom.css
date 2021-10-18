@@ -14,3 +14,10 @@
 .todoForm {
     padding-bottom: 60px
 }
+
+.todoActions {
+    padding-bottom: 60px;
+    font-family: 'Helvetica';
+    color: #557;
+    display: flex;
+}

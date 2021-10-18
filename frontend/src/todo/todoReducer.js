@@ -6,7 +6,10 @@ import {
 } from '../objects/objects.constants';
 
 const initialState = {
-	description: '', list: [] 
+	description: '',
+	 list: [],
+	 author: undefined,
+	 date: new Date()
 };
 
 export default (state = initialState, action) => {

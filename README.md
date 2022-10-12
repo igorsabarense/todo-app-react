@@ -1,10 +1,4 @@
-# ToDo React App
+# TODO React APP
 
-
-#Objetivo
-
--- App que tem como objetivo uma lista de afazeres --
-
-
-#Curso Udemy
---- App foi feito como parte do curso da udemy proposto pela Group Software ---
+This app is a to-do list created when studying the Udemy's react course. 
+It contains CSS, SASS, React JS and Redux.

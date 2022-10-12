@@ -15,9 +15,9 @@
     "express": "^4.17.1",
     "mongoose": "4.7.0",
     "node-restful": "0.2.5",
-    "pm2": "2.1.5"
+    "pm2": "2.10.4"
   },
   "devDependencies": {
-    "nodemon": "1.11.0"
+    "nodemon": "1.19.4"
   }
 }

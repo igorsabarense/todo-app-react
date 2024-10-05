@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: ./backend
+    container_name: backend
+    environment:
+      - MONGO_DB_URL=mongodb://mongo:27017/todos
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    volumes:
+      - ./backend:/app/backend
+    command: npm run dev
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./frontend:/app/frontend
+    command: npm run dev
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
